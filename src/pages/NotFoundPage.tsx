@@ -1,0 +1,2 @@
+﻿import { ArrowRight } from 'lucide-react';
+export default function NotFoundPage() { return <section className="public-not-found"><span className="eyebrow">404 / A little off route</span><h1>Let's get you<br /><em>back on track.</em></h1><p>We couldn't find this page. Your next stop is just a click away.</p><a className="primary-button" href="/">Back to MyBox <ArrowRight size={17} /></a></section>; }
