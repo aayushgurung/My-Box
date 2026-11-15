@@ -1,4 +1,4 @@
-.ad-brand {
+.admin-brand {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -8,7 +8,7 @@
   letter-spacing: -1.5px;
 }
 
-.ad-brand>span:first-child {
+.admin-brand>span:first-child {
   display: grid;
   place-items: center;
   width: 36px;
@@ -21,13 +21,13 @@
   padding-right: 3px;
 }
 
-.ad-brand-dot {
+.admin-brand-dot {
   color: #75aaff;
   margin-left: -9px;
 }
 
-.ad-sidebar {
-  width: var(--ad-sidebar-width);
+.admin-sidebar {
+  width: var(--admin-sidebar-width);
   max-width: calc(100vw - 48px);
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -41,12 +41,12 @@
   color: #acc0da;
 }
 
-.ad-sidebar .ad-brand {
+.admin-sidebar .admin-brand {
   padding: 0 15px;
   flex-shrink: 0;
 }
 
-.ad-workspace {
+.admin-workspace {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -57,7 +57,7 @@
   border-radius: 10px;
 }
 
-.ad-workspace-icon {
+.admin-workspace-icon {
   display: grid;
   place-items: center;
   width: 32px;
@@ -67,24 +67,24 @@
   color: #bad5f9;
 }
 
-.ad-workspace div {
+.admin-workspace div {
   flex: 1;
 }
 
-.ad-workspace strong {
+.admin-workspace strong {
   display: block;
   color: #edf3fc;
   font-size: 12px;
 }
 
-.ad-workspace small {
+.admin-workspace small {
   display: block;
   font-size: 10px;
   margin-top: 5px;
   color: #90a8c4;
 }
 
-.ad-nav-label {
+.admin-nav-label {
   font-size: 9px;
   letter-spacing: 1.7px;
   color: #7690af;
@@ -92,12 +92,12 @@
   margin-bottom: 12px;
 }
 
-.ad-sidebar nav {
+.admin-sidebar nav {
   display: grid;
   gap: 6px;
 }
 
-.ad-nav {
+.admin-nav {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -109,22 +109,22 @@
   font-weight: 500;
 }
 
-.ad-nav:hover {
+.admin-nav:hover {
   background: #1c3a5e;
   color: #fff;
 }
 
-.ad-nav.active {
+.admin-nav.active {
   color: #fff;
   background: #3079e6;
   box-shadow: 0 4px 12px #071a3322;
 }
 
-.ad-nav span {
+.admin-nav span {
   flex: 1;
 }
 
-.ad-nav b {
+.admin-nav b {
   font-size: 10px;
   font-weight: 500;
   padding: 2px 6px;
@@ -132,12 +132,12 @@
   border-radius: 5px;
 }
 
-.ad-sidebar-bottom {
+.admin-sidebar-bottom {
   margin-top: auto;
   padding-top: 40px;
 }
 
-.ad-preview-card {
+.admin-preview-card {
   font-size: 11px;
   color: #e3edfa;
   border: 1px solid #324a67;
@@ -146,14 +146,14 @@
   margin: 0 5px 18px;
 }
 
-.ad-preview-card p {
+.admin-preview-card p {
   font-size: 11px;
   line-height: 1.7;
   color: #93a9c4;
   margin-top: 7px;
 }
 
-.ad-account {
+.admin-account {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -162,7 +162,7 @@
   margin-top: 16px;
 }
 
-.ad-avatar {
+.admin-avatar {
   width: 34px;
   height: 34px;
   background: #e8effa;
@@ -175,12 +175,12 @@
   font-weight: 700;
 }
 
-.ad-account div {
+.admin-account div {
   min-width: 0;
   flex: 1;
 }
 
-.ad-account strong {
+.admin-account strong {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -189,7 +189,7 @@
   color: #f2f6fd;
 }
 
-.ad-account small {
+.admin-account small {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -198,29 +198,29 @@
   margin-top: 4px;
 }
 
-.ad-account button {
+.admin-account button {
   background: transparent;
   color: #a3b9d5;
   padding: 5px;
 }
 
-.ad-content {
-  margin-left: var(--ad-sidebar-width);
+.admin-content {
+  margin-left: var(--admin-sidebar-width);
   min-width: 0;
   flex: 1;
 }
 
-.ad-topbar {
+.admin-topbar {
   height: 78px;
   background: white;
-  border-bottom: 1px solid var(--ad-border);
+  border-bottom: 1px solid var(--admin-border);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
 }
 
-.ad-breadcrumb {
+.admin-breadcrumb {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -228,18 +228,18 @@
   color: #96a2b4;
 }
 
-.ad-top-right {
+.admin-top-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.ad-breadcrumb strong {
+.admin-breadcrumb strong {
   font-weight: 500;
   color: #42556f;
 }
 
-.ad-preview-pill {
+.admin-preview-pill {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -251,26 +251,26 @@
   border-radius: 20px;
 }
 
-.ad-preview-pill i {
+.admin-preview-pill i {
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #4baf91;
 }
 
-.ad-mobile-toggle {
+.admin-mobile-toggle {
   display: none;
   background: none;
   color: #244164;
 }
 
-.ad-main {
+.admin-main {
   max-width: 1530px;
   margin: auto;
   padding: 39px 40px 0;
 }
 
-.ad-footer {
+.admin-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -279,87 +279,87 @@
   font-size: 9px;
 }
 
-.ad-scrim {
+.admin-scrim {
   display: none;
 }
 
 @media (min-width:1450px) {
-  .ad-main {
+  .admin-main {
     padding-top: 48px;
   }
 }
 
 @media (max-width:1150px) {
-  .ad-shell {
-    --ad-sidebar-width: 220px;
+  .admin-shell {
+    --admin-sidebar-width: 220px;
   }
 
-  .ad-sidebar {
+  .admin-sidebar {
     padding-left: 12px;
     padding-right: 12px;
   }
 
-  .ad-main {
+  .admin-main {
     padding: 30px 24px 0;
   }
 
-  .ad-topbar {
+  .admin-topbar {
     padding: 0 24px;
   }
 }
 
 @media (max-width:650px) {
-  .ad-shell {
-    --ad-sidebar-width: 246px;
+  .admin-shell {
+    --admin-sidebar-width: 246px;
   }
 
-  .ad-sidebar {
+  .admin-sidebar {
     transform: translateX(-100%);
     transition: transform .2s;
   }
 
-  .ad-sidebar.ad-open {
+  .admin-sidebar.admin-open {
     transform: translateX(0);
   }
 
-  .ad-content {
+  .admin-content {
     margin-left: 0;
   }
 
-  .ad-mobile-toggle {
+  .admin-mobile-toggle {
     display: flex;
     padding: 0;
   }
 
-  .ad-topbar {
+  .admin-topbar {
     padding: 0 20px;
     height: 66px;
   }
 
-  .ad-top-right {
+  .admin-top-right {
     gap: 10px;
   }
 
-  .ad-breadcrumb {
+  .admin-breadcrumb {
     gap: 8px;
     font-size: 10px;
   }
 
-  .ad-preview-pill {
+  .admin-preview-pill {
     font-size: 8px;
     padding: 6px 8px;
   }
 
-  .ad-main {
+  .admin-main {
     padding: 28px 18px 0;
   }
 
-  .ad-footer {
+  .admin-footer {
     font-size: 8px;
     gap: 15px;
   }
 
-  .ad-scrim {
+  .admin-scrim {
     display: block;
     position: fixed;
     inset: 0;

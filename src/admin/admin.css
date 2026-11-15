@@ -1,4 +1,5 @@
 /* Admin-only styles; public styles never target this workspace. */
+/* Use admin- names: ad- prefixes can match browser ad-blocking filters. */
 @import './styles/components.css';
 @import './styles/layout.css';
 @import './styles/dashboard.css';

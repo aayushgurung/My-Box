@@ -35,8 +35,8 @@ export default function AdminAccess({ login, children }: { login: ReactNode; chi
       window.history.replaceState({}, '', '/admin/login');
     }
   }, [session]);
-  if (access === 'error' || (session && access === 'denied')) return <main className="ad-access-state"><h1>{access === 'denied' ? 'Admin access required' : 'Unable to verify access'}</h1><p role="alert">{access === 'denied' ? 'This account is signed in but is not listed in mybox_admins. Ask the project owner to grant access.' : error}</p><button className="ad-button" onClick={() => session ? setRetry(value => value + 1) : window.location.reload()}>Try again</button><button className="ad-button" onClick={() => void signOutAdmin().catch((cause: Error) => setError(cause.message))}>Sign out</button><a href="/">Back to MyBox</a></main>;
-  if (session === undefined || (session && access === 'checking')) return <main className="ad-access-state" role="status">Checking admin access...</main>;
+  if (access === 'error' || (session && access === 'denied')) return <main className="admin-access-state"><h1>{access === 'denied' ? 'Admin access required' : 'Unable to verify access'}</h1><p role="alert">{access === 'denied' ? 'This account is signed in but is not listed in mybox_admins. Ask the project owner to grant access.' : error}</p><button className="admin-button" onClick={() => session ? setRetry(value => value + 1) : window.location.reload()}>Try again</button><button className="admin-button" onClick={() => void signOutAdmin().catch((cause: Error) => setError(cause.message))}>Sign out</button><a href="/">Back to MyBox</a></main>;
+  if (session === undefined || (session && access === 'checking')) return <main className="admin-access-state" role="status">Checking admin access...</main>;
   if (!session) return login;
   return children(session.user.email || 'Administrator');
 }
