@@ -31,9 +31,18 @@ export default function AdminAccess({ login, children }: { login: ReactNode; chi
     return () => { active = false; };
   }, [session, retry]);
   useEffect(() => {
-    if (session === null && window.location.pathname !== '/admin/login') {
-      window.history.replaceState({}, '', '/admin/login');
-    }
+    if (session !== null) return;
+
+    const redirectToLogin = () => {
+      if (window.location.pathname !== '/admin/login') {
+        window.history.replaceState({}, '', '/admin/login');
+      }
+    };
+
+    redirectToLogin();
+    // Back/Forward can change the URL without changing the signed-out session.
+    window.addEventListener('popstate', redirectToLogin);
+    return () => window.removeEventListener('popstate', redirectToLogin);
   }, [session]);
   if (access === 'error' || (session && access === 'denied')) return <main className="admin-access-state"><h1>{access === 'denied' ? 'Admin access required' : 'Unable to verify access'}</h1><p role="alert">{access === 'denied' ? 'This account is signed in but is not listed in mybox_admins. Ask the project owner to grant access.' : error}</p><button className="admin-button" onClick={() => session ? setRetry(value => value + 1) : window.location.reload()}>Try again</button><button className="admin-button" onClick={() => void signOutAdmin().catch((cause: Error) => setError(cause.message))}>Sign out</button><a href="/">Back to MyBox</a></main>;
   if (session === undefined || (session && access === 'checking')) return <main className="admin-access-state" role="status">Checking admin access...</main>;
